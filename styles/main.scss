@@ -76,3 +76,62 @@ body {
     }
   }
 }
+
+// video placeholder
+.video-placeholder-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .video-placeholder {
+    max-width: 1416px;
+    height: 720px;
+    min-height: 500px;
+    width: 100%;
+
+    margin: 1.875rem;
+    border-radius: 1.875rem;
+    background-image: url(../public/assets/hallway.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 30px;
+
+    .play-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+
+      background-color: $black;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      width: 185px;
+      height: 90px;
+      gap: 0px;
+      border-radius: 129px;
+
+      p {
+        margin: 15px;
+        margin-left: 30px;
+      }
+
+      .play-button {
+        width: 66px;
+        height: 66px;
+        border-radius: 100%;
+        background-color: $main-yellow;
+        margin: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
