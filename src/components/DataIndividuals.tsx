@@ -1,11 +1,10 @@
-const BusinessSection = () => {
+const IndividulasSection = () => {
   return (
-    <section className="business-quo">
+    <section className="business-quo individuals">
       <div className="content">
-        <p className="page-number">01</p>
+        <p className="page-number">02</p>
         <h2 className="title">
-          The Insufficient Status
-          <br /> Quo for Businesses
+          Fairness and Objective <br /> Data for Individuals
         </h2>
         <div className="description-wrapper">
           <p className="desc-title">For employers</p>
@@ -49,4 +48,4 @@ const BusinessSection = () => {
   );
 };
 
-export default BusinessSection;
+export default IndividulasSection;

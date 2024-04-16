@@ -47,6 +47,10 @@ body {
   &.schedule {
     background: $black;
     color: white;
+
+    &.bquo {
+      width: 100%;
+    }
   }
 
   &:hover {
@@ -360,5 +364,97 @@ footer {
       bottom: 50px;
       right: 200px;
     }
+  }
+}
+
+//Business Quo
+.business-quo {
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 30px;
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &.individuals {
+    flex-direction: row-reverse;
+    background-color: $medium-grey;
+
+    .image-button {
+      margin-right: 50px;
+      background-image: url(../public/assets/individuals.png);
+    }
+  }
+
+  .title {
+    font-size: 62px;
+    font-weight: 500;
+    line-height: 68px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    margin: 0px;
+    margin-bottom: 50px;
+  }
+  .page-number {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 14px;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+  .description-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-top: 1px solid $black;
+    padding-top: 30px;
+    margin-bottom: 30px;
+    gap: 20px;
+
+    .desc-title {
+      color: grey;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 16px;
+      text-align: left;
+      margin-right: 50px;
+    }
+    .information {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 26px;
+      text-align: left;
+      max-width: 640px;
+      padding-right: 50px;
+    }
+
+    .insights {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 16px;
+      text-align: left;
+      margin-right: 30px;
+
+      p {
+        margin-top: 0px;
+        max-width: 223px;
+      }
+    }
+  }
+
+  .image-button {
+    width: 421px;
+    height: 636px;
+    background-image: url(../public/assets/talking-bquo.png);
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 20px;
   }
 }
