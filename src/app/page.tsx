@@ -11,6 +11,7 @@ import ChooseUs from '@/components/ChooseUs';
 import LinkList from '@/components/LinkList';
 import BusinessSection from '@/components/BusinessSection';
 import DataIndividuals from '@/components/DataIndividuals';
+import Fairness from '@/components/Fairness';
 
 // This component renders your homepage.
 //
@@ -45,6 +46,7 @@ export default async function Index() {
       <ChooseUs />
       <BusinessSection />
       <DataIndividuals />
+      <Fairness />
       <LinkList />
     </main>
   );

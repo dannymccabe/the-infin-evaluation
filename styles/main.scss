@@ -47,6 +47,7 @@ body {
   &.schedule {
     background: $black;
     color: white;
+    width: 13.9375rem;
 
     &.bquo {
       width: 100%;
@@ -456,5 +457,123 @@ footer {
     background-size: cover;
     overflow: hidden;
     border-radius: 20px;
+  }
+}
+
+.fairness-section {
+  background-color: $black;
+  color: white;
+  border-radius: 30px;
+  padding: 30px;
+  margin: 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  .left {
+    .page-number {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 14px;
+      text-align: left;
+    }
+
+    .title {
+      font-size: 62px;
+      font-weight: 500;
+      line-height: 68px;
+      letter-spacing: -0.01em;
+      text-align: left;
+      margin-bottom: 100px;
+    }
+    span {
+      color: $main-yellow;
+    }
+
+    .information {
+      color: grey;
+      max-width: 283px;
+      margin-top: 100px;
+      p {
+        margin-bottom: 30px;
+      }
+      .border-top {
+        border-top: solid 1px white;
+        padding-top: 30px;
+      }
+    }
+  }
+
+  .right {
+    max-width: 670px;
+    padding-right: 50px;
+    padding-top: 80px;
+
+    .quoteblock {
+      margin-bottom: 50px;
+      .profile {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15px;
+        img {
+          border-radius: 100%;
+        }
+      }
+
+      .name-wrapper {
+        .name {
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 22px;
+          text-align: left;
+          margin: 0px;
+        }
+
+        .role {
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 22px;
+          text-align: left;
+          margin: 0px;
+          color: grey;
+        }
+      }
+    }
+  }
+
+  .swiper {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    .circle {
+      border-radius: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      height: 66px;
+      width: 66px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transition: ease-in-out 0.3s all;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.2);
+        cursor: pointer;
+      }
+    }
+
+    p {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 26px;
+      text-align: left;
+
+      span {
+        color: rgba(255, 255, 255, 0.1);
+      }
+    }
   }
 }
