@@ -1,16 +1,16 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 
 const Navbar = () => {
   const [scrollY, setScrollY] = useState(0);
-  const controls = useAnimation();
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
+      setIsScrolled(window.scrollY > 100);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -19,13 +19,6 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  useEffect(() => {
-    controls.start({
-      opacity: scrollY > 100 ? 1 : 1, // Adjust opacity as needed
-      y: scrollY > 100 ? -50 : 0,
-    });
-  }, [scrollY, controls]);
 
   const navLinks = [
     { text: 'Home', href: '/' },
@@ -36,51 +29,34 @@ const Navbar = () => {
   ];
 
   return (
-    <motion.header initial={{ y: 0 }} animate={controls}>
-      <motion.nav
-        className="navbar"
-        initial={{ opacity: 1 }}
-        animate={controls}
-      >
+    <header>
+      <nav className={`navbar ${isScrolled ? 'navbar-scroll' : ''}`}>
         <div className="logo-container">
-          <motion.div
-            initial={{ width: 513, height: 90 }}
-            animate={
-              scrollY > 100
-                ? { width: 200, height: 50 }
-                : { width: 513, height: 90 }
-            }
-            transition={{ duration: 1, ease: 'easeInOut' }} // Adjust duration and easing
-          >
-            <Image src="/assets/logo.svg" alt="Logo" width={513} height={90} />
-          </motion.div>
+          <Image
+            src="/assets/logo.svg"
+            alt="Logo"
+            width={isScrolled ? 189 : 513}
+            height={isScrolled ? 33 : 90}
+          />
         </div>
-        <motion.ul>
+        <ul className={`${isScrolled ? 'ul-direction-change' : ''}`}>
           {navLinks.map((link, index) => (
-            <motion.li
-              key={index}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1, x: scrollY > 100 ? -20 : 0 }}
-              transition={{
-                duration: 0.5,
-                ease: 'easeInOut',
-                delay: 0.1 * index,
-              }} // Adjust duration, easing, and delay
-            >
+            <li key={index}>
               <Link href={link.href}>{link.text}</Link>
-            </motion.li>
+            </li>
           ))}
-        </motion.ul>
-        <motion.button
+        </ul>
+        <button
           className="button"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }} // Adjust duration, easing, and delay
+          style={{
+            width: isScrolled ? '108px' : '13.9375rem',
+            height: isScrolled ? '45px' : '5.625rem',
+          }}
         >
           Contact
-        </motion.button>
-      </motion.nav>
-    </motion.header>
+        </button>
+      </nav>
+    </header>
   );
 };
 
