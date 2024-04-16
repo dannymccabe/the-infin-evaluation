@@ -69,6 +69,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  background-color: $dark-grey;
 }
 .navbar {
   margin: 1.875rem;
@@ -671,4 +672,10 @@ footer {
   align-items: center;
   justify-content: center;
   color: $main-yellow;
+}
+
+//paralax section
+.sticky-parallax {
+  position: sticky;
+  top: 60px;
 }

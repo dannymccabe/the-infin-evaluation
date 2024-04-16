@@ -1,6 +1,6 @@
 const BusinessSection = () => {
   return (
-    <section className="business-quo">
+    <section className="business-quo sticky-parallax">
       <div className="content">
         <p className="page-number">01</p>
         <h2 className="title">

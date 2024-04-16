@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const Fairness = () => {
   return (
-    <section className="fairness-section">
+    <section className="fairness-section sticky-parallax">
       <div className="left">
         <p className="page-number">03</p>
         <h2 className="title">

@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const CTAsection = () => {
   return (
-    <section className="CTA-section">
+    <section className="CTA-section sticky-parallax">
       <p className="page-number">04</p>
       <div className="center">
         <p>What can The INFIN do for you?</p>

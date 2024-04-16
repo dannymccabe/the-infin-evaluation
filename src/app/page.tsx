@@ -45,10 +45,12 @@ export default async function Index() {
       {/* <SliceZone slices={home.data.slices} components={components} /> */}
       <VideoPlaceholder />
       <ChooseUs />
-      <BusinessSection />
-      <DataIndividuals />
-      <Fairness />
-      <CTAsection />
+      <div className="parallax-section-conatinaer">
+        <BusinessSection />
+        <DataIndividuals />
+        <Fairness />
+        <CTAsection />
+      </div>
       <LinkList />
     </main>
   );
