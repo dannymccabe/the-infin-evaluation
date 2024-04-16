@@ -53,6 +53,10 @@ body {
       width: 100%;
     }
   }
+  &.cta {
+    background: #fff;
+    color: $black;
+  }
 
   &:hover {
     background-color: $main-yellow;
@@ -249,7 +253,7 @@ footer {
 
 .linklist {
   margin: 30px;
-  margin-top: 200px;
+  margin-top: 50px;
   display: flex;
   flex-wrap: nowrap;
   margin-bottom: 300px;
@@ -575,5 +579,81 @@ footer {
         color: rgba(255, 255, 255, 0.1);
       }
     }
+  }
+}
+
+.CTA-section {
+  background-color: $main-yellow;
+  border-radius: 30px;
+  padding: 30px;
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 80vh;
+  max-height: 741px;
+
+  .center {
+    margin-top: 50px;
+    p {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 18px;
+      text-align: center;
+    }
+    h2 {
+      font-size: 120px;
+      font-weight: 500;
+      line-height: 110px;
+      letter-spacing: -0.01em;
+      text-align: center;
+      margin: 30px;
+      text-transform: uppercase;
+    }
+  }
+
+  .button-wrapper {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  //absolute postitioning
+  .page-number {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 14px;
+    text-align: left;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    right: 50%;
+  }
+
+  .plus-wrapper {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+  }
+
+  .plus-wrapper2 {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    transform: rotate(180deg);
+  }
+
+  .image-wrapper1 {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+  .image-wrapper2 {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
   }
 }

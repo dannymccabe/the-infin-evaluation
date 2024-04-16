@@ -12,6 +12,7 @@ import LinkList from '@/components/LinkList';
 import BusinessSection from '@/components/BusinessSection';
 import DataIndividuals from '@/components/DataIndividuals';
 import Fairness from '@/components/Fairness';
+import CTAsection from '@/components/CTAsection';
 
 // This component renders your homepage.
 //
@@ -47,6 +48,7 @@ export default async function Index() {
       <BusinessSection />
       <DataIndividuals />
       <Fairness />
+      <CTAsection />
       <LinkList />
     </main>
   );
