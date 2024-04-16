@@ -8,6 +8,7 @@ import { components } from '@/slices';
 import VideoPlaceholder from '@/components/VideoPlaceholder';
 import Hero from '@/components/Hero';
 import ChooseUs from '@/components/ChooseUs';
+import LinkList from '@/components/LinkList';
 
 // This component renders your homepage.
 //
@@ -40,6 +41,7 @@ export default async function Index() {
       {/* <SliceZone slices={home.data.slices} components={components} /> */}
       <VideoPlaceholder />
       <ChooseUs />
+      <LinkList />
     </main>
   );
 }
